@@ -1,12 +1,14 @@
+import { ActivityIndicator, Button,  } from '@react-native-material/core';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import Inbox from './screens/Inbox';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView>
+      <StatusBar style='auto'/>
+      <Inbox/>
+    </SafeAreaView>
   );
 }
 
