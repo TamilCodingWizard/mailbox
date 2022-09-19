@@ -2,7 +2,7 @@ import { Avatar, Box, ListItem, Text } from "@react-native-material/core";
 import { useState } from "react";
 import { FlatList } from "react-native";
 
-const Inbox = () => {
+const Inbox = ({navigation}) => {
   const [mails, setMails] = useState([
     {
       id: "1",
@@ -19,9 +19,15 @@ const Inbox = () => {
     },
   ]);
 
+  const handleTap = (item) => {
+    console.log('Tapped')
+    console.log(item)
+    navigation.push('DetailsScreen',{item})
+  }
+
   return (
     <>
-      <Box mt={60}>
+      <Box>
         <FlatList
           data={mails}
           keyExtractor={(item) => item.id}
@@ -35,6 +41,7 @@ const Inbox = () => {
               }
               title={item.subject}
               secondaryText={item.content}
+              onPress={() => handleTap(item)}
             />
           )}
         />
