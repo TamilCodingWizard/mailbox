@@ -1,8 +1,7 @@
-import { ActivityIndicator, Button, IconComponentProvider } from "@react-native-material/core";
+import {  IconComponentProvider } from "@react-native-material/core";
 import { NavigationContainer } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
-import Inbox from "./screens/Inbox";
 import { InboxStack } from "./routes/InboxStack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { DraftsStack } from "./routes/DraftsStack";
